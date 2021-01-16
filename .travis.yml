@@ -1,0 +1,16 @@
+# whitelist
+branches:
+  only:
+    - Kaylan
+​
+language: node_js
+node_js:
+  - "9"
+dist: trusty
+sudo: required
+before_script:
+  - npm install -g @angular/cli
+script:
+- ng lint
+- ng build --prod --base-href https://github.com/1908-aug19-java/project2-joe-michael-frontend
+- npm run sonar

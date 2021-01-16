@@ -1,0 +1,17 @@
+<app-navbar></app-navbar><br>
+
+  <div *ngIf = "userPlaylist">
+    <h6 class = "display-4">{{userPlaylist.username}} Home</h6>
+  </div>
+    <div>
+      <br>
+      <label>Add To Playlist: <select [(ngModel)] = "playlistId" class = "selectpicker" name = "My Playlists">   
+            <option *ngFor="let playlist of userPlaylist2.playlists" [value] = "playlist.playlistId" >{{playlist.name}}</option>
+        </select></label>
+          </div>
+  <div class = "row"  >
+    <div class = "col" *ngFor = "let up of userPlaylist.playlists">
+        <h4><strong>{{up.name}}</strong></h4>
+        <p *ngFor = "let song of up.songs"><a href = "https://open.spotify.com/track/{{song.spotifySongId}}" target = "_blank">{{song.name}} - {{song.artist}}</a><img src = "http://www.free-icons-download.net/images/plus-button-icon-73848.png" id = "img" (click) = "addSong(song.name,song.artist,song.spotifySongId)"/></p>
+    </div>
+  </div>

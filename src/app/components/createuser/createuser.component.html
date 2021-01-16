@@ -1,0 +1,15 @@
+<div class = "row justify-content-center">
+        <form class="form-login">
+                <img id  = "img" src = "https://pm1.narvii.com/6832/199d953f6a20d0e664c0e0c5d3bd5a29aaaf20a9v2_hq.jpg"/><br><br>
+                
+                <input [(ngModel)] = "firstname" name = "firstname" type="text" class="form-control" placeholder="First Name" required autofocus>
+                <input [(ngModel)] = "lastname" name = "lastname" type="text" class="form-control" placeholder="Last Name" required autofocus>
+                <input [(ngModel)] = "username" name = "username" type="text" class="form-control" placeholder="Username" required autofocus>
+                <input [(ngModel)] = "email" name = "email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                <input [(ngModel)] = "password" name = "password" type="password" id="inputPassword" class="form-control" placeholder="Password" required><br>
+                <div class="checkbox mb-3">
+                <input type = "button" class = "btn btn-primary btn-block" value = "Create User Account" (click) = "createUser()">
+                <input type = "button" class = "btn btn-primary btn-block" value = "Return To Home" routerLink = "/">
+                </div>
+        </form>
+</div>

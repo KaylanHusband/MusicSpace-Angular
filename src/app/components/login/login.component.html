@@ -1,0 +1,16 @@
+<div class = "row justify-content-center">
+        <form class="form-signin">
+                <img id  = "img" src = "https://pm1.narvii.com/6832/199d953f6a20d0e664c0e0c5d3bd5a29aaaf20a9v2_hq.jpg"/><br><br>
+                
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required [(ngModel)] = "email" name = "email">
+               
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required [(ngModel)] = "password" name = "password">
+                <div class="checkbox mb-3">
+                </div>
+                <div>
+                        <button class="btn btn-primary btn-block" type="submit" (click) = "loginUser()">Log In</button>
+                        <input type = "button" class = "btn btn-primary btn-block" value = "Create User" routerLink = "/create">
+                </div>
+        </form>
+</div>
+

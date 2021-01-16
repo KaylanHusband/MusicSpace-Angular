@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<Header>
+<h6 class = "display-4" *ngIf = "userPlaylist">
+  Hey {{userPlaylist.firstname}}!
+</h6>
+</Header>
+  <div>
+      <button (click) = "createPlaylist()" class ="btn btn-primary btn-sm">Create Playlist</button>&nbsp;
+      <input type = "text" [(ngModel)] = "playlistName" name = "playlistName"/>
+  </div>
+  <br>
+  <div>
+    <h2>My Playlists</h2>
+  </div>
+  <div class = "row"  >
+    <div class = "col"  *ngFor = "let up of userPlaylist.playlists">
+        <h4><strong>{{up.name}}</strong><img src = "https://visualpharm.com/assets/332/Trash%20Can-595b40b75ba036ed117d7c1c.svg" id = "img" (click) = "deletePlaylist(up.playlistId)"/></h4>
+        <p *ngFor = "let song of up.songs"><a href = "https://open.spotify.com/track/{{song.spotifySongId}}" target = "_blank">{{song.name}} - {{song.artist}}</a><img src = "https://visualpharm.com/assets/332/Trash%20Can-595b40b75ba036ed117d7c1c.svg" id = "img" (click) = "deleteSong(song.songId,up.playlistId)"/></p>
+    </div>
+  </div>
+    
+
+  
