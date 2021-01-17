@@ -11,10 +11,10 @@ import { Playlist } from 'Models/Playlist';
   styleUrls: ['./search-user.component.css']
 })
 export class SearchUserComponent implements OnInit {
-  userPlaylist: UserPlaylist[] = [];
+  userPlaylist:any;
   userId: string = localStorage.getItem('token');
   id: number = parseInt(this.userId,10);
-  userPlaylist2: UserPlaylist[] = [];
+  userPlaylist2:any;
   playlistId: any;
   
 

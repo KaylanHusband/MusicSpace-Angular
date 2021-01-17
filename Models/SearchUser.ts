@@ -1,3 +1,5 @@
-export class SearchUser {
-    user: any[];
+import { User } from "./User";
+
+export interface SearchUser {
+    firstname:string;
 }

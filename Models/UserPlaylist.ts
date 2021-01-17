@@ -1,7 +1,7 @@
 import {Playlist} from './Playlist';
 
-export class UserPlaylist {
+export interface UserPlaylist {
     userId: number;
     playlists: Playlist[];
-    firstname: any;
+    firstname: string;
 }

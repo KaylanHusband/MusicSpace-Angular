@@ -3,6 +3,7 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 import { SearchUser } from '../../../../Models/SearchUser';
 import { Playlist } from '../../../../Models/Playlist';
 import {Song} from '../../../../Models/Song';
+import { User } from 'Models/User';
 
 
 @Component({
@@ -12,7 +13,7 @@ import {Song} from '../../../../Models/Song';
 })
 export class SharingComponent implements OnInit {
   searchUsr: string;
-  user: SearchUser[] = [];
+  user:any;
   playlists: Playlist[] = [];
   songs: Song[] = [];
   
@@ -26,7 +27,7 @@ export class SharingComponent implements OnInit {
     this.spotifyService.getUsers(this.searchUsr)
     .subscribe(res=> {  
       console.log(`User is ${res}`); 
-      this.user['user'] = res;
+      this.user = res;
     });
 
 }

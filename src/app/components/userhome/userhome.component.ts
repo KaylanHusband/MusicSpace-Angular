@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from 'src/app/services/spotify.service';
-import {UserPlaylist} from '../../../../Models/UserPlaylist';
+
 import { Song } from '../../../../Models/Song';
 import { Playlist } from '../../../../Models/Playlist';
+import { UserPlaylist } from 'Models/UserPlaylist';
 
 @Component({
   selector: 'app-userhome',
@@ -13,8 +14,8 @@ export class UserhomeComponent implements OnInit {
   userId: string = sessionStorage.getItem('token');
   id: number = parseInt(this.userId,10);
   playlistName: string;
-  userPlaylist: UserPlaylist[] = [];
-  playlists: Playlist[] = [];
+  userPlaylist: UserPlaylist;
+  any: Playlist[] = [];
   songs: Song[] = [];
 
   
