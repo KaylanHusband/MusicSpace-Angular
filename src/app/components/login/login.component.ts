@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from 'src/app/services/spotify.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
   
 
   constructor(private spotifyService: SpotifyService,
-              private router: Router) {
+              private router: Router, private toastr: ToastrService) {
 
                }
 
@@ -31,12 +32,12 @@ export class LoginComponent implements OnInit {
               this.spotifyService.setOauthToken();
               this.login();
             } else {
-              
+              this.toastr.error("Please enter a valid username and password","Error");
             }
         });   
   }
   login() {
-    
+
         this.router.navigate(['/spotlight']);  
   }
   
