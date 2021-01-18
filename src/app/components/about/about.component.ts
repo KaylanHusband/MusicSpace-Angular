@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit() {
@@ -16,4 +17,6 @@ export class AboutComponent implements OnInit {
     localStorage.clear();
   }
 
+
 }
+

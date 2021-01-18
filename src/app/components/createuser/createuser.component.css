@@ -5,5 +5,62 @@
 }
 
 .form-login{
-    margin-top: 50px;
+    margin-top: 20px;
+}
+
+h5{
+    color:orange;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#materialRegisterFormFirstName{
+    width: 40%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid orange;
+    align-items: center;
+    position: relative;
+}
+
+#materialRegisterFormLastName{
+    width: 40%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid orange;
+    align-items: center;
+    position: relative;
+}
+
+#materialRegisterFormEmail{
+    width: 40%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid orange;
+    align-items: center;
+    position: relative;
+}
+
+#materialRegisterFormPassword{
+    width: 40%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid orange;
+    align-items: center;
+    position: relative;
+}
+
+#materialRegisterFormPhone{
+    width: 40%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid orange;
+    align-items: center;
+    position: relative;
 }
