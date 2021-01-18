@@ -28,6 +28,8 @@ export class LoginComponent implements OnInit {
               sessionStorage.setItem('token', JSON.stringify(res.userId));
               this.spotifyService.setOauthToken();
               this.login();
+            } else {
+              
             }
         });   
   }

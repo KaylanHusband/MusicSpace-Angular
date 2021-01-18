@@ -21,6 +21,7 @@ export class SharingComponent implements OnInit {
   constructor(private spotifyService: SpotifyService) { }
 
   ngOnInit() {
+    
   }
 
   searchUsers() {
