@@ -13,7 +13,7 @@ import { User } from 'Models/User';
 })
 export class SharingComponent implements OnInit {
   searchUsr: string;
-  user:any;
+  user:any[] = [];
   playlists: Playlist[] = [];
   songs: Song[] = [];
   
@@ -21,14 +21,15 @@ export class SharingComponent implements OnInit {
   constructor(private spotifyService: SpotifyService) { }
 
   ngOnInit() {
-    
+
   }
 
   searchUsers() {
     this.spotifyService.getUsers(this.searchUsr)
     .subscribe(res=> {  
-      console.log(`User is ${res}`); 
-      this.user = res;
+      let result = JSON.stringify(res);
+      console.log(`User is ${result}`); 
+      this.user['user'] = res;
     });
 
 }
