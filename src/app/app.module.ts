@@ -15,8 +15,7 @@ import { SharingComponent } from './components/sharing/sharing.component';
 import { SearchUserComponent } from './components/search-user/search-user.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SpotlightComponent } from './components/spotlight/spotlight.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ToastrModule } from 'ngx-toastr';
+
 
 
 
@@ -42,9 +41,7 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-	  ToastrModule.forRoot()
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

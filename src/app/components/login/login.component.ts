@@ -13,7 +13,9 @@ export class LoginComponent implements OnInit {
   
 
   constructor(private spotifyService: SpotifyService,
-              private router: Router) { }
+              private router: Router) {
+
+               }
 
   ngOnInit() {
     localStorage.clear();
@@ -34,6 +36,7 @@ export class LoginComponent implements OnInit {
         });   
   }
   login() {
+    
         this.router.navigate(['/spotlight']);  
   }
   
