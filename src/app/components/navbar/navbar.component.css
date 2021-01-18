@@ -3,3 +3,12 @@
     width:auto;
 }
 
+.navBar{
+    background-color: white;
+}
+
+a{
+    color:whitesmoke;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
